@@ -1,3 +1,4 @@
+/*body*/
 body {
     font-family: 'Inter', sans-serif;
     margin: 0;
@@ -5,8 +6,8 @@ body {
     color: #333;
   }
   
-  /* Moving Banner */
-  .moving-banner {
+/*moving banner*/
+.moving-banner {
     background: #dc8dbf;
     overflow: hidden;
     white-space: nowrap;
@@ -16,9 +17,8 @@ body {
     display: flex;
     align-items: center;
     z-index: 100; 
-  }
-  
-  .banner-content {
+} 
+.banner-content {
     display: inline-block;
     color: white;
     font-weight: bold;
@@ -27,22 +27,19 @@ body {
     animation: scroll 60s linear infinite;
     white-space: nowrap;
     width: 200%;
-  }
-  
-  .banner-content span {
+}
+.banner-content span {
     margin-right: 10px;
-  }
-  
-  @keyframes scroll {
+}
+@keyframes scroll {
     0% {
       transform: translateX(0%);
     }
     100% {
       transform: translateX(-50%);
     }
-  }
-  
-  @keyframes gradientShift {
+}
+@keyframes gradientShift {
     0% {
       background-position: 0% 50%;
     }
@@ -52,9 +49,8 @@ body {
     100% {
       background-position: 0% 50%;
     }
-  }
-  
-  /* Main Navigation Bar - Linear Layout */
+}
+/*nav bar*/
   .main-nav {
     background: white;
     padding: 1.5rem 13rem 1.5rem 0.5rem;
@@ -63,7 +59,6 @@ body {
     min-height: 80px;
     z-index: 99; 
   }
-  
   .nav-container {
     display: flex;
     justify-content: space-between;
@@ -72,11 +67,9 @@ body {
     margin: 0 auto;
     width: 100%;
   }
-  
   .nav-menu-wrapper {
     position: relative;
   }
-  
   .menu-oval {
     position: absolute;
     width: 1000px;
@@ -90,7 +83,6 @@ body {
     opacity: 0.8;
     box-shadow: 0 5px 15px rgba(220, 141, 191, 0.3);
   }
-  
   .nav-logo {
     display: flex;
     align-items: center;
@@ -98,23 +90,19 @@ body {
     margin-left: 0;
     flex-shrink: 0;
   }
-  
   .nav-logo a {
     text-decoration: none;
     display: inline-block;
   }
-  
   .logo-img {
     width: 500px;
     height: 100px;
     border-radius: 10px;
     transition: transform 0.2s ease;
   }
-  
   .nav-logo a:hover .logo-img {
     transform: scale(1.05);
   }
-  
   .nav-menu {
     list-style: none;
     margin: 0;
@@ -122,11 +110,9 @@ body {
     display: flex;
     gap: 2rem;
   }
-  
   .nav-menu li {
     display: inline-block;
   }
-  
   .nav-menu a {
     color: #62464b;
     text-decoration: none;
@@ -139,37 +125,34 @@ body {
     transform: rotate(0deg);
     display: inline-block;
   }
-  
-  .nav-menu a:hover {
+.nav-menu a:hover {
     background: #dc8dbf;
     transform: rotate(15deg);
     color: white;
-  }
-
-    .kalkulator-container {
-        max-width: 900px;
-        margin: 40px auto;
-        background: white;
-        border-radius: 18px;
-        box-shadow: 0 8px 32px rgba(220,141,191,0.10);
-        padding: 2.5rem 2rem 2rem 2rem;
-    }
-
-.kalkulator-title {
-  font-size: 2.5rem;
-  color: #b86fa5;
-  font-family: 'Titan One', cursive;
-  text-align: center;
-  margin-bottom: 0.5rem;
 }
 
+/*kalkulator*/
+.kalkulator-container {
+    max-width: 900px;
+    margin: 40px auto;
+    background: white;
+    border-radius: 18px;
+    box-shadow: 0 8px 32px rgba(220,141,191,0.10);
+    padding: 2.5rem 2rem 2rem 2rem;
+}
+.kalkulator-title {
+    font-size: 2.5rem;
+    color: #b86fa5;
+    font-family: 'Titan One', cursive;
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
 .kalkulator-tabs {
   display: flex;
   justify-content: center;
   gap: 1.5rem;
   margin-bottom: 2rem;
 }
-
 .kalkulator-tab {
   background: #f7e6f0;
   border: none;
@@ -186,7 +169,6 @@ body {
   background: #b86fa5;
   color: #fff;
 }
-
 .kalkulator-panel {
   display: none;
   animation: fadeIn 0.5s;
@@ -194,12 +176,10 @@ body {
 .kalkulator-panel.active {
   display: block;
 }
-
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
 }
-
 .input-group {
   margin-bottom: 1.2rem;
 }
@@ -218,7 +198,6 @@ body {
   font-size: 1rem;
   font-family: 'Space Mono', monospace;
 }
-
 .kalkulator-btn {
   background: linear-gradient(45deg, #dc8dbf, #e6a3cc);
   color: #fff;
@@ -247,7 +226,6 @@ body {
   font-size: 1.1rem;
   word-break: break-word;
 }
-
 .math-preview {
   font-family: 'Space Mono', monospace;
   background: #f3f3f3;
@@ -257,7 +235,6 @@ body {
   display: inline-block;
   color: #333;
 }
-
 @media (max-width: 600px) {
   .kalkulator-container {
     padding: 1rem 0.5rem;
@@ -270,9 +247,7 @@ body {
     gap: 0.5rem;
   }
 }
-
-/*--------------------------------------------------------*/
-/* Floating tiramisu Emojis */
+/*--------------------------hiasan yg panjang------------------------------*/
   .floating-tiramisu {
     position: fixed;
     top: 0;
@@ -283,21 +258,17 @@ body {
     z-index: -1;
     overflow: hidden;
   }
-  
   .tiramisu {
     position: absolute;
     font-size: 2rem;
     animation: float 15s linear infinite;
     opacity: 0.8;
   }
-  
   .tiramisu img {
     width: 2rem;
     height: 2rem;
     object-fit: contain;
   }
-  
-  /* Mathematical Emojis */
   .math-emoji {
     position: absolute;
     font-size: 1.5rem;
@@ -306,13 +277,12 @@ body {
     color: #dc8dbf;
     font-weight: bold;
   }
-  
+
   .math-1 {
     left: 15%;
     animation-delay: -1s;
     animation-duration: 14s;
   }
-  
   .math-2 {
     left: 25%;
     animation-delay: -3s;
@@ -443,15 +413,13 @@ body {
       opacity: 0;
     }
   }
-  
-  /* Hover effect for tiramisus */
-    .tiramisu:hover {
-        animation-play-state: paused;
-        transform: scale(1.5) rotate(180deg);
-        transition: all 0.3s ease;
-    }
+.tiramisu:hover {
+    animation-play-state: paused;
+    transform: scale(1.5) rotate(180deg);
+    transition: all 0.3s ease;
+}
 
-/* Footer */
+/*footer*/
 .site-footer {
   position: relative;
   padding: 10rem 0 2.5rem 0;
@@ -508,7 +476,6 @@ body {
   color: white;
   text-decoration: none;
   font-weight: 600;
-  
 }
 .footer-nav a:hover {
   text-decoration: underline;
