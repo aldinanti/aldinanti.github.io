@@ -1,4 +1,4 @@
-/* Popup Pilihan Mode Belajar Modul */
+/*modul*/
 #modul-popup {
   position: fixed;
   z-index: 9999;
@@ -83,7 +83,7 @@ body {
     color: #333;
   }
   
-  /* Moving Banner */
+  /*moving banner*/
   .moving-banner {
     background: #dc8dbf;
     overflow: hidden;
@@ -95,7 +95,6 @@ body {
     align-items: center;
     z-index: 100; 
   }
-  
   .banner-content {
     display: inline-block;
     color: white;
@@ -106,11 +105,9 @@ body {
     white-space: nowrap;
     width: 200%;
   }
-  
   .banner-content span {
     margin-right: 10px;
   }
-  
   @keyframes scroll {
     0% {
       transform: translateX(0%);
@@ -119,7 +116,6 @@ body {
       transform: translateX(-50%);
     }
   }
-  
   @keyframes gradientShift {
     0% {
       background-position: 0% 50%;
@@ -131,8 +127,8 @@ body {
       background-position: 0% 50%;
     }
   }
-  
-  /* Main Navigation Bar - Linear Layout */
+
+/**nav bar**/
   .main-nav {
     background: white;
     padding: 1.5rem 13rem 1.5rem 0.5rem;
@@ -141,7 +137,6 @@ body {
     min-height: 80px;
     z-index: 99; 
   }
-  
   .nav-container {
     display: flex;
     justify-content: space-between;
@@ -150,11 +145,9 @@ body {
     margin: 0 auto;
     width: 100%;
   }
-  
   .nav-menu-wrapper {
     position: relative;
   }
-  
   .menu-oval {
     position: absolute;
     width: 1000px;
@@ -168,7 +161,6 @@ body {
     opacity: 0.8;
     box-shadow: 0 5px 15px rgba(220, 141, 191, 0.3);
   }
-  
   .nav-logo {
     display: flex;
     align-items: center;
@@ -176,23 +168,19 @@ body {
     margin-left: 0;
     flex-shrink: 0;
   }
-  
   .nav-logo a {
     text-decoration: none;
     display: inline-block;
   }
-  
   .logo-img {
     width: 500px;
     height: 100px;
     border-radius: 10px;
     transition: transform 0.2s ease;
   }
-  
   .nav-logo a:hover .logo-img {
     transform: scale(1.05);
   }
-  
   .nav-menu {
     list-style: none;
     margin: 0;
@@ -200,11 +188,9 @@ body {
     display: flex;
     gap: 2rem;
   }
-  
   .nav-menu li {
     display: inline-block;
   }
-  
   .nav-menu a {
     color: #62464b;
     text-decoration: none;
@@ -217,14 +203,13 @@ body {
     transform: rotate(0deg);
     display: inline-block;
   }
-  
   .nav-menu a:hover {
     background: #dc8dbf;
     transform: rotate(15deg);
     color: white;
   }
   
-  /* Floating tiramisu Emojis */
+  /*hiasan*/
   .floating-tiramisu {
     position: fixed;
     top: 0;
@@ -235,21 +220,17 @@ body {
     z-index: 1;
     overflow: hidden;
   }
-  
   .tiramisu {
     position: absolute;
     font-size: 2rem;
     animation: float 15s linear infinite;
     opacity: 0.8;
   }
-  
   .tiramisu img {
     width: 2rem;
     height: 2rem;
     object-fit: contain;
   }
-  
-  /* Mathematical Emojis */
   .math-emoji {
     position: absolute;
     font-size: 1.5rem;
@@ -258,31 +239,26 @@ body {
     color: #dc8dbf;
     font-weight: bold;
   }
-  
   .math-1 {
     left: 15%;
     animation-delay: -1s;
     animation-duration: 14s;
   }
-  
   .math-2 {
     left: 25%;
     animation-delay: -3s;
     animation-duration: 16s;
   }
-  
   .math-3 {
     left: 35%;
     animation-delay: -5s;
     animation-duration: 13s;
   }
-  
   .math-4 {
     left: 45%;
     animation-delay: -7s;
     animation-duration: 15s;
   }
-  
   .math-5 {
     left: 55%;
     animation-delay: -9s;
@@ -396,14 +372,13 @@ body {
     }
   }
   
-  /* Hover effect for tiramisus */
   .tiramisu:hover {
     animation-play-state: paused;
     transform: scale(1.5) rotate(180deg);
     transition: all 0.3s ease;
   }
   
-/* Modul Section */
+/*modul utama*/
 .modul-section {
     background-color: #f7e6f0; /* Warna pink muda */
     display: flex;
@@ -518,7 +493,7 @@ body {
   transform: scale(1.05);
   box-shadow: 0 5px 15px rgba(220, 141, 191, 0.3);
 } 
-/* Footer */
+/*footer*/
 .site-footer {
   position: relative;
   padding: 10rem 0 2.5rem 0;
