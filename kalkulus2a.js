@@ -1,6 +1,4 @@
-// Kalkulator Integral & Aplikasi Integral
-
-// Tab switching
+//hitung switch tab
 function switchLabTab(tab) {
 	document.querySelectorAll('.kalkulator-tab').forEach(btn => btn.classList.remove('active'));
 	document.querySelectorAll('.kalkulator-panel').forEach(panel => panel.classList.remove('active'));
@@ -8,7 +6,7 @@ function switchLabTab(tab) {
 	document.getElementById(tab + '-panel').classList.add('active');
 }
 
-// Integral
+// hitung integral
 function hitungIntegral() {
 	const fx = document.getElementById('integral-fx').value;
 	const a = parseFloat(document.getElementById('integral-a').value);
@@ -16,7 +14,6 @@ function hitungIntegral() {
 	let result = '';
 	try {
 		if (window.math) {
-			// Integral numerik (karena math.js tidak symbolic definite integral)
 			const f = x => math.evaluate(fx, {x});
 			const N = 1000;
 			const dx = (b - a) / N;
@@ -35,7 +32,7 @@ function hitungIntegral() {
 	document.getElementById('integral-result').innerHTML = result;
 }
 
-// Aplikasi Integral
+// hitung aplikasi integral
 function hitungAplikasiIntegral() {
 	const fx = document.getElementById('aplikasi-fx').value;
 	const a = parseFloat(document.getElementById('aplikasi-a').value);
@@ -71,7 +68,6 @@ function hitungAplikasiIntegral() {
 	document.getElementById('aplikasi-result').innerHTML = result;
 }
 
-// Inisialisasi tab
 window.addEventListener('DOMContentLoaded', function() {
 	document.querySelectorAll('.kalkulator-tab').forEach(btn => {
 		btn.addEventListener('click', function() {
