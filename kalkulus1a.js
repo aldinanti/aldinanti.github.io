@@ -1,7 +1,3 @@
-// Kalkulus 1A Virtual Lab Interaktif
-// Pastikan file ini di-link di HTML dan kalkulus1a.css juga di-link
-
-// Tab switching
 function switchLabTab(tab) {
   document.querySelectorAll('.kalkulator-tab').forEach(btn => btn.classList.remove('active'));
   document.querySelectorAll('.kalkulator-panel').forEach(panel => panel.classList.remove('active'));
@@ -9,13 +5,11 @@ function switchLabTab(tab) {
   document.getElementById(tab + '-panel').classList.add('active');
 }
 
-// Limit
 function hitungLimit() {
   const fx = document.getElementById('limit-fx').value;
   const x0 = parseFloat(document.getElementById('limit-x0').value);
   let result = '';
   try {
-    // Pakai math.js jika ada, jika tidak fallback ke eval (tidak aman untuk produksi)
     if (window.math) {
       const expr = fx.replace(/\^/g, '**');
       const lim = math.evaluate(expr, {x: x0});
@@ -31,7 +25,6 @@ function hitungLimit() {
   document.getElementById('limit-result').innerHTML = result;
 }
 
-// Turunan
 function hitungTurunan() {
   const fx = document.getElementById('diff-fx').value;
   const x0 = parseFloat(document.getElementById('diff-x0').value);
@@ -42,7 +35,6 @@ function hitungTurunan() {
       const val = math.derivative(fx, 'x').evaluate({x: x0});
       result = `f'(x) = <span class="math-preview">${diff}</span><br>f'(${x0}) = <b>${val}</b>`;
     } else {
-      // Fallback: numerik
       const h = 1e-5;
       const expr = fx.replace(/\^/g, '**');
       const f1 = eval(expr.replace(/x/g, `(${x0}+${h})`));
@@ -56,7 +48,6 @@ function hitungTurunan() {
   document.getElementById('diff-result').innerHTML = result;
 }
 
-// Aplikasi Turunan: Titik Stasioner & Jenisnya
 function aplikasiTurunan() {
   const fx = document.getElementById('aplikasi-fx').value;
   let result = '';
@@ -64,8 +55,6 @@ function aplikasiTurunan() {
     if (window.math) {
       const d1 = math.derivative(fx, 'x');
       const d2 = math.derivative(d1, 'x');
-      // Cari akar turunan pertama (titik stasioner)
-      // math.js tidak punya solve langsung, jadi coba brute force di range -20..20
       let stasioner = [];
       for (let x = -20; x <= 20; x += 0.01) {
         const val = d1.evaluate({x});
@@ -90,8 +79,6 @@ function aplikasiTurunan() {
   }
   document.getElementById('aplikasi-result').innerHTML = result;
 }
-
-// Inisialisasi tab
 window.addEventListener('DOMContentLoaded', function() {
   document.querySelectorAll('.kalkulator-tab').forEach(btn => {
     btn.addEventListener('click', function() {
