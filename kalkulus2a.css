@@ -1,0 +1,546 @@
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    background: white;
+    color: #333;
+  }
+  
+  /* Moving Banner */
+  .moving-banner {
+    background: #dc8dbf;
+    overflow: hidden;
+    white-space: nowrap;
+    position: sticky;
+    top: 0;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    z-index: 100; 
+  }
+  
+  .banner-content {
+    display: inline-block;
+    color: white;
+    font-weight: bold;
+    font-family: 'Fredoka', Light-300;
+    font-size: 16px;
+    animation: scroll 60s linear infinite;
+    white-space: nowrap;
+    width: 200%;
+  }
+  
+  .banner-content span {
+    margin-right: 10px;
+  }
+  
+  @keyframes scroll {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+  
+  @keyframes gradientShift {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  /* Main Navigation Bar - Linear Layout */
+  .main-nav {
+    background: white;
+    padding: 1.5rem 13rem 1.5rem 0.5rem;
+    position: sticky;
+    top: 30px; 
+    min-height: 80px;
+    z-index: 99; 
+  }
+  
+  .nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+  }
+  
+  .nav-menu-wrapper {
+    position: relative;
+  }
+  
+  .menu-oval {
+    position: absolute;
+    width: 1000px;
+    height: 100px;
+    background: linear-gradient(45deg, #dc8dbf, #e6a3cc);
+    border-radius: 50px;
+    top: 50%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    opacity: 0.8;
+    box-shadow: 0 5px 15px rgba(220, 141, 191, 0.3);
+  }
+  
+  .nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-left: 0;
+    flex-shrink: 0;
+  }
+  
+  .nav-logo a {
+    text-decoration: none;
+    display: inline-block;
+  }
+  
+  .logo-img {
+    width: 500px;
+    height: 100px;
+    border-radius: 10px;
+    transition: transform 0.2s ease;
+  }
+  
+  .nav-logo a:hover .logo-img {
+    transform: scale(1.05);
+  }
+  
+  .nav-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 2rem;
+  }
+  
+  .nav-menu li {
+    display: inline-block;
+  }
+  
+  .nav-menu a {
+    color: #62464b;
+    text-decoration: none;
+    padding: 0.5rem 1.5rem;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+    font-weight: bold;
+    font-family: 'Fredoka';
+    font-size: 24px;
+    transform: rotate(0deg);
+    display: inline-block;
+  }
+  
+  .nav-menu a:hover {
+    background: #dc8dbf;
+    transform: rotate(15deg);
+    color: white;
+  }
+
+    .kalkulator-container {
+        max-width: 900px;
+        margin: 40px auto;
+        background: white;
+        border-radius: 18px;
+        box-shadow: 0 8px 32px rgba(220,141,191,0.10);
+        padding: 2.5rem 2rem 2rem 2rem;
+    }
+
+.kalkulator-title {
+  font-size: 2.5rem;
+  color: #b86fa5;
+  font-family: 'Titan One', cursive;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.kalkulator-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.kalkulator-tab {
+  background: #f7e6f0;
+  border: none;
+  border-radius: 20px 20px 0 0;
+  padding: 0.7rem 2.5rem;
+  font-size: 1.1rem;
+  color: #b86fa5;
+  font-family: 'Fredoka', sans-serif;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+.kalkulator-tab.active {
+  background: #b86fa5;
+  color: #fff;
+}
+
+.kalkulator-panel {
+  display: none;
+  animation: fadeIn 0.5s;
+}
+.kalkulator-panel.active {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.input-group {
+  margin-bottom: 1.2rem;
+}
+.input-group label {
+  display: block;
+  margin-bottom: 0.3rem;
+  color: #62464b;
+  font-weight: 500;
+  font-family:'Fredoka', sans-serif;
+}
+.input-group input, .input-group select {
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  font-family: 'Space Mono', monospace;
+}
+
+.kalkulator-btn {
+  background: linear-gradient(45deg, #dc8dbf, #e6a3cc);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 0.7rem 2rem;
+  font-size: 1.1rem;
+  font-family: 'Fredoka', sans-serif;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  transition: background 0.2s, transform 0.2s;
+}
+.kalkulator-btn:hover {
+  background: #b86fa5;
+  transform: scale(1.04);
+}
+
+.kalkulator-result {
+  background: #f7e6f0;
+  border-radius: 10px;
+  padding: 1rem;
+  margin-top: 1.2rem;
+  font-family: 'Space Mono', monospace;
+  color: #b86fa5;
+  font-size: 1.1rem;
+  word-break: break-word;
+}
+
+.math-preview {
+  font-family: 'Space Mono', monospace;
+  background: #f3f3f3;
+  border-radius: 6px;
+  padding: 0.3rem 0.7rem;
+  margin-bottom: 0.5rem;
+  display: inline-block;
+  color: #333;
+}
+
+@media (max-width: 600px) {
+  .kalkulator-container {
+    padding: 1rem 0.5rem;
+  }
+  .kalkulator-title {
+    font-size: 1.5rem;
+  }
+  .kalkulator-tabs {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+
+/*--------------------------------------------------------*/
+/* Floating tiramisu Emojis */
+  .floating-tiramisu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    pointer-events: none;
+    z-index: -1;
+    overflow: hidden;
+  }
+  
+  .tiramisu {
+    position: absolute;
+    font-size: 2rem;
+    animation: float 15s linear infinite;
+    opacity: 0.8;
+  }
+  
+  .tiramisu img {
+    width: 2rem;
+    height: 2rem;
+    object-fit: contain;
+  }
+  
+  /* Mathematical Emojis */
+  .math-emoji {
+    position: absolute;
+    font-size: 1.5rem;
+    animation: float 12s linear infinite;
+    opacity: 0.7;
+    color: #dc8dbf;
+    font-weight: bold;
+  }
+  
+  .math-1 {
+    left: 15%;
+    animation-delay: -1s;
+    animation-duration: 14s;
+  }
+  
+  .math-2 {
+    left: 25%;
+    animation-delay: -3s;
+    animation-duration: 16s;
+  }
+  
+  .math-3 {
+    left: 35%;
+    animation-delay: -5s;
+    animation-duration: 13s;
+  }
+  
+  .math-4 {
+    left: 45%;
+    animation-delay: -7s;
+    animation-duration: 15s;
+  }
+  
+  .math-5 {
+    left: 55%;
+    animation-delay: -9s;
+    animation-duration: 17s;
+  }
+  
+  .math-6 {
+    left: 65%;
+    animation-delay: -11s;
+    animation-duration: 12s;
+  }
+  
+  .math-7 {
+    left: 75%;
+    animation-delay: -13s;
+    animation-duration: 18s;
+  }
+  
+  .math-8 {
+    left: 85%;
+    animation-delay: -15s;
+    animation-duration: 14s;
+  }
+  
+  .math-9 {
+    left: 95%;
+    animation-delay: -17s;
+    animation-duration: 16s;
+  }
+  
+  .math-10 {
+    left: 5%;
+    animation-delay: -19s;
+    animation-duration: 13s;
+  }
+  
+  .tiramisu-1 {
+    left: 10%;
+    animation-delay: 0s;
+    animation-duration: 20s;
+  }
+  
+  .tiramisu-2 {
+    left: 20%;
+    animation-delay: -2s;
+    animation-duration: 18s;
+  }
+  
+  .tiramisu-3 {
+    left: 30%;
+    animation-delay: -4s;
+    animation-duration: 22s;
+  }
+  
+  .tiramisu-4 {
+    left: 40%;
+    animation-delay: -6s;
+    animation-duration: 16s;
+  }
+  
+  .tiramisu-5 {
+    left: 50%;
+    animation-delay: -8s;
+    animation-duration: 19s;
+  }
+  
+  .tiramisu-6 {
+    left: 60%;
+    animation-delay: -10s;
+    animation-duration: 17s;
+  }
+  
+  .tiramisu-7 {
+    left: 70%;
+    animation-delay: -12s;
+    animation-duration: 21s;
+  }
+  
+  .tiramisu-8 {
+    left: 80%;
+    animation-delay: -14s;
+    animation-duration: 15s;
+  }
+  
+  .tiramisu-9 {
+    left: 90%;
+    animation-delay: -16s;
+    animation-duration: 23s;
+  }
+  
+  .tiramisu-10 {
+    left: 95%;
+    animation-delay: -18s;
+    animation-duration: 18s;
+  }
+  
+  @keyframes float {
+    0% {
+      transform: translateY(100vh) rotate(0deg);
+      opacity: 0;
+    }
+    10% {
+      opacity: 0.8;
+    }
+    90% {
+      opacity: 0.8;
+    }
+    100% {
+      transform: translateY(-100px) rotate(360deg);
+      opacity: 0;
+    }
+  }
+  
+  /* Hover effect for tiramisus */
+    .tiramisu:hover {
+        animation-play-state: paused;
+        transform: scale(1.5) rotate(180deg);
+        transition: all 0.3s ease;
+    }
+/* Footer */
+.site-footer {
+  position: relative;
+  padding: 10rem 0 2.5rem 0;
+  font-family: 'Fredoka', sans-serif;
+  margin-top: 3rem;
+  background: linear-gradient(
+    to bottom,
+    #903a27 0% 18%,
+    #f5e9bb 18% 36%,
+    #682f11 36% 54%,
+    #f6e7bc 54% 72%,
+    #853d1b 72% 100%
+  );
+  box-shadow: 0 -4px 24px 0 rgba(220,141,191,0.08);
+  overflow: hidden;
+}
+.site-footer::before {
+  content: '';
+  position: absolute;
+  left: 0; right: 0; top: 0; bottom: 0;
+  z-index: 0;
+  pointer-events: none;
+  background: repeating-linear-gradient(
+    to bottom,
+    #f7e6f0 0 32px,
+    #e6a3cc 32px 64px,
+    #fff3e6 64px 96px,
+    #b86fa5 96px 128px,
+    #fffbe6 128px 160px
+  );
+  opacity: 0.13;
+}
+.footer-content {
+  position: relative;
+  background-color: rgba(220, 141, 191, 0.5);
+  padding: 2rem;
+  border-radius: 30px;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  min-height: 180px;
+}
+.footer-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.footer-nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  
+}
+.footer-nav a:hover {
+  text-decoration: underline;
+}
+.footer-email input, .footer-email button {
+  font-family: 'Space Mono', monospace;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  padding: 0.4rem 0.7rem;
+  font-size: 1rem;
+}
+.footer-email button {
+  background: #b86fa5;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.2s;
+}
+.footer-email button:hover {
+  background: #dc8dbf;
+}
+.footer-bottom {
+  width: 100%;
+  text-align: center;
+  color: white;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  font-weight: 600;
+  margin-top: auto;
+  padding-top: 2.5rem;
+  padding-bottom: 0.5rem;
+}
+@media (max-width: 700px) {
+  .footer-content { flex-direction: column; gap: 1rem; align-items: flex-start; }
+}
