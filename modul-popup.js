@@ -1,16 +1,13 @@
-// Script untuk pop up pilihan "Mulai Belajar" pada modul
-
-// Hanya tombol Kalkulus IA yang trigger popup
-window.addEventListener('DOMContentLoaded', function() {
+window.addEventListener('DOMContentLoaded', function(){
   var btnKalkIA = document.getElementById('mulai-kalkulus-ia');
   var btnKalkIIA = document.getElementById('mulai-kalkulus-iia');
   if (btnKalkIA) {
-    btnKalkIA.addEventListener('click', function(e) {
+    btnKalkIA.addEventListener('click', function(e){
       e.preventDefault();
            showModulPopup('kalkulus1a.html');
     });
   }
-  if (btnKalkIIA) {
+  if (btnKalkIIA){
     btnKalkIIA.addEventListener('click', function(e) {
       e.preventDefault();
       showModulPopup('kalkulus2a.html');
@@ -27,17 +24,17 @@ function showModulPopup(targetUrl) {
   }
 }
 
-// Inisialisasi event handler popup setelah DOM siap
-window.addEventListener('DOMContentLoaded', function() {
+
+window.addEventListener('DOMContentLoaded', function(){
   const popup = document.getElementById('modul-popup');
-  if (popup) {
+  if (popup){
     popup.querySelector('.modul-popup-overlay').onclick = closeModulPopup;
     popup.querySelector('.modul-popup-close').onclick = closeModulPopup;
     popup.querySelector('#btn-kalkulator').onclick = function(){window.location.href = kalkulatorTargetUrl;};
     popup.querySelector('#btn-latihan').onclick = function(){alert('masih dalam development');closeModulPopup();};
   }
 });
-function closeModulPopup() {
+function closeModulPopup(){
   const popup = document.getElementById('modul-popup');
   if (popup) popup.style.display = 'none';
 }
